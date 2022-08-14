@@ -1,0 +1,43 @@
+4/25/2021
+Progress: lots of fixes to display issues, fixed most currency and other displays.  Fixed the Modals on the server(needed full links instead of relative links with AJAX POST statements)
+Issue: one little viewbag issue not showing as currency. Also can't pass two parameters through for jquery search
+Goal: Last fixes and get set for presentation.
+
+4/11/2021 
+Progress: Cleaning up the pages and starting to get them presentable(switching labelfors etc)
+Issue: Running into a selectlist issue for one of my viewbag properties. For some reason the action POST isn't working, didn't actually look into it since it wasn't a huge issue but should be addressed. 
+Goal: Task page with toggle, Possibly get an approval for money views. 
+ 
+3/21/2021
+Progress: Task pages done. Added the new claim view(needs link added to layout page still) added an add property button in the wizard so you can add that from there.
+Issue: just need to figure out how to do the return to the original url (similar to how the login page works)
+Goal: Clean up the pages for the sprints so it starts looking more professional.
+
+3/7/2021
+Progress: Set up pathing for layout files so they will pull based on role(currently only adjuster implemented.  Added sorting to adjuster page(ascending and descending. 
+Issue: Cannot get create view to work for Actions.  It passes null. Kirk and I cannot figure out why it doesn't work. We have to add them manually into the database to get it to work.
+Goal: Set up task pages for adjuster and manager. get detail page working for claim(lots of changes to formating) Get the app working for the next sprint.
+
+2/22/2021
+Progress: added the abilty to push a parameter throught the adjuster view.  Published. Got the login to work. added functionality to basic admin view. 
+Issue: Just need to figure out how to get the autoredirect at login to work (we know how just need to implement)
+Goals:Get log in done and finish the views we're working on so we can move on to the next views.
+
+2/7/2021
+Progress: Built out basic controllers. Started to get users set up for the app.
+Issue: we built the app without the built in mvc login.  I've found a way to take an existing app and convert it but it's fairly complicated.  It may be quicker and much easier to just create a new app and copy over our current progress to it.
+Goals: Get user situation sorted so we can have a presentable rough draft for the next sprint.
+
+1/24/2021
+Progress: Finsihed designing the schema(several change had to be made)(If aaron didn't get a chance to submit his PIG, he and i had a follow up call to figure it out)
+Issue: none so far
+Goals: start building the web app and get it all set up in GitHub
+
+
+1/17/2021
+Progress:So far  we have the Schema designed for our web app.  We met with an insurance professional to give the team background with the insurance industry as well as experience working with a potential user to identify needs for the software. We will have at least one more meeting with her(when we have the software completed to simulate delivery and QA).   
+
+Issues: None so far, team working well together.
+
+Goals: Get architecture laid out for the Adjuster area of the site this week so we can start building it out.
+

@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Action">
+    <Key>
+      <PropertyRef Name="ActionId" />
+    </Key>
+    <Property Name="ActionId" Type="int" Nullable="false" />
+    <Property Name="ActionType" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Adjustor">
+    <Key>
+      <PropertyRef Name="AdjustorId" />
+    </Key>
+    <Property Name="AdjustorId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsManager" Type="bit" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ManagerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="AttachmentId" Type="int" Nullable="false" />
+    <Property Name="Attachment" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ClaimActionId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Claim">
+    <Key>
+      <PropertyRef Name="ClaimId" />
+    </Key>
+    <Property Name="ClaimId" Type="int" Nullable="false" />
+    <Property Name="AdjustorId" Type="int" Nullable="false" />
+    <Property Name="PropertyId" Type="int" Nullable="false" />
+    <Property Name="DateOfLoss" Type="datetime" Nullable="false" />
+    <Property Name="Attachment" Type="varbinary(max)" />
+    <Property Name="Reserves" Type="money" Nullable="false" />
+    <Property Name="Deductable" Type="money" Nullable="false" />
+    <Property Name="AmountPaid" Type="money" Nullable="false" />
+    <Property Name="Status" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ClaimAction">
+    <Key>
+      <PropertyRef Name="ClaimActionId" />
+    </Key>
+    <Property Name="ClaimActionId" Type="int" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="DollarAmount" Type="money" />
+    <Property Name="Note" Type="varchar(max)" Nullable="false" />
+    <Property Name="ClaimId" Type="int" Nullable="false" />
+    <Property Name="ActionId" Type="int" Nullable="false" />
+    <Property Name="AdjustorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Insured">
+    <Key>
+      <PropertyRef Name="InsuredId" />
+    </Key>
+    <Property Name="InsuredId" Type="int" Nullable="false" />
+    <Property Name="Name_First" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name_Last" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MailingAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Zip" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="ManagerId" />
+    </Key>
+    <Property Name="ManagerId" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="Email" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+    </Key>
+    <Property Name="PropertyId" Type="int" Nullable="false" />
+    <Property Name="InsuredId" Type="int" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="City" Type="nchar" MaxLength="10" />
+    <Property Name="State" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Zip" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_100">
+    <End Role="Adjustor" Type="Self.Adjustor" Multiplicity="1" />
+    <End Role="ClaimAction" Type="Self.ClaimAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adjustor">
+        <PropertyRef Name="AdjustorId" />
+      </Principal>
+      <Dependent Role="ClaimAction">
+        <PropertyRef Name="AdjustorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_112">
+    <End Role="ClaimAction" Type="Self.ClaimAction" Multiplicity="1" />
+    <End Role="Attachment" Type="Self.Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClaimAction">
+        <PropertyRef Name="ClaimActionId" />
+      </Principal>
+      <Dependent Role="Attachment">
+        <PropertyRef Name="ClaimActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_24">
+    <End Role="Insured" Type="Self.Insured" Multiplicity="1" />
+    <End Role="Property" Type="Self.Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Insured">
+        <PropertyRef Name="InsuredId" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="InsuredId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_43">
+    <End Role="Property" Type="Self.Property" Multiplicity="1" />
+    <End Role="Claim" Type="Self.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="PropertyId" />
+      </Principal>
+      <Dependent Role="Claim">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_72">
+    <End Role="Adjustor" Type="Self.Adjustor" Multiplicity="1" />
+    <End Role="Claim" Type="Self.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adjustor">
+        <PropertyRef Name="AdjustorId" />
+      </Principal>
+      <Dependent Role="Claim">
+        <PropertyRef Name="AdjustorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_75">
+    <End Role="Manager" Type="Self.Manager" Multiplicity="1" />
+    <End Role="Adjustor" Type="Self.Adjustor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manager">
+        <PropertyRef Name="ManagerId" />
+      </Principal>
+      <Dependent Role="Adjustor">
+        <PropertyRef Name="ManagerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_90">
+    <End Role="Claim" Type="Self.Claim" Multiplicity="1" />
+    <End Role="ClaimAction" Type="Self.ClaimAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Claim">
+        <PropertyRef Name="ClaimId" />
+      </Principal>
+      <Dependent Role="ClaimAction">
+        <PropertyRef Name="ClaimId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_97">
+    <End Role="Action" Type="Self.Action" Multiplicity="1" />
+    <End Role="ClaimAction" Type="Self.ClaimAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Action">
+        <PropertyRef Name="ActionId" />
+      </Principal>
+      <Dependent Role="ClaimAction">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Action" EntityType="Self.Action" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Adjustor" EntityType="Self.Adjustor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Attachment" EntityType="Self.Attachment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Claim" EntityType="Self.Claim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ClaimAction" EntityType="Self.ClaimAction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Insured" EntityType="Self.Insured" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manager" EntityType="Self.Manager" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Property" EntityType="Self.Property" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_100" Association="Self.FK_100">
+      <End Role="Adjustor" EntitySet="Adjustor" />
+      <End Role="ClaimAction" EntitySet="ClaimAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_112" Association="Self.FK_112">
+      <End Role="ClaimAction" EntitySet="ClaimAction" />
+      <End Role="Attachment" EntitySet="Attachment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_24" Association="Self.FK_24">
+      <End Role="Insured" EntitySet="Insured" />
+      <End Role="Property" EntitySet="Property" />
+    </AssociationSet>
+    <AssociationSet Name="FK_43" Association="Self.FK_43">
+      <End Role="Property" EntitySet="Property" />
+      <End Role="Claim" EntitySet="Claim" />
+    </AssociationSet>
+    <AssociationSet Name="FK_72" Association="Self.FK_72">
+      <End Role="Adjustor" EntitySet="Adjustor" />
+      <End Role="Claim" EntitySet="Claim" />
+    </AssociationSet>
+    <AssociationSet Name="FK_75" Association="Self.FK_75">
+      <End Role="Manager" EntitySet="Manager" />
+      <End Role="Adjustor" EntitySet="Adjustor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_90" Association="Self.FK_90">
+      <End Role="Claim" EntitySet="Claim" />
+      <End Role="ClaimAction" EntitySet="ClaimAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_97" Association="Self.FK_97">
+      <End Role="Action" EntitySet="Action" />
+      <End Role="ClaimAction" EntitySet="ClaimAction" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

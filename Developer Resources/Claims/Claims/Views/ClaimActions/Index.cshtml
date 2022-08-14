@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Claims.Models.ClaimAction>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DollarAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Action.ActionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adjustor.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Claim.ClaimId)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DollarAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Action.ActionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adjustor.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Claim.ClaimId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ClaimActionId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ClaimActionId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ClaimActionId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

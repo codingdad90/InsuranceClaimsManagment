@@ -1,0 +1,21 @@
+﻿@{
+    if (this.User.IsInRole("Manager"))
+    {
+      //  Layout = "~/Views/Shared/_Managerlayout.cshtml";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+    else
+    {
+
+        if (this.User.IsInRole("Adjustor"))
+        {
+          //  Layout = "~/Views/Shared/_Adjusterlayout.cshtml";
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+        else
+        {
+
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+    }
+}

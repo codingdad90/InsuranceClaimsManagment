@@ -1,0 +1,156 @@
+﻿
+
+@*<br />
+@using (Html.BeginForm("UploadFiles", "Attachments", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+
+    <div class="form-horizontal">
+
+        <div class="form-group">
+            <div class="col-lg-2">Browse Files</div>
+            <div class="col-md-10">
+                <input type="file" multiple name="files" id="Files" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Upload" class="btn btn-primary" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 text-success">
+                @ViewBag.UploadStatus
+            </div>
+        </div>
+
+    </div>
+}*@
+
+
+
+
+
+<h2>UploadFile</h2>
+
+@using (Html.BeginForm("Upload",
+                        "Attachments",
+                        FormMethod.Post,
+                        new { enctype = "multipart/form-data" }))
+{
+    <label for="file">Upload File:</label>
+    <input type="file" name="file" id="file" />
+    <br>
+    <br>
+
+    <input type="submit" value="Upload" />
+
+    <br>
+    <br>
+
+    @ViewBag.Message
+}
+
+@*@model IEnumerable<MAKClaims.Models.Attachment>
+
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Attachment1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClaimAction.Note)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Attachment1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClaimAction.Note)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.AttachmentId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.AttachmentId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.AttachmentId })
+            </td>
+        </tr>
+    }
+
+    </table>*@
+@*@{
+            Layout = "~/Views/Shared/_Layout.cshtml";
+        }
+
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Drag & Drop file upload </h2>
+    <div id="dropArea">
+        Drop your files here
+    </div>
+    <h4>Uploaded files : </h4>
+    <ul class="list-group" id="uploadList">
+    </ul>
+
+    <style>
+        #dropArea {
+            background: #b5b5b5;
+            border: black dashed 1px;
+            height: 50px;
+            text-align: center;
+            color: #fff;
+            padding-top: 12px;
+        }
+
+        .active-drop {
+            background: #77bafa !important;
+            border: solid 2px blue !important;
+            opacity: .5;
+            color: black !important;
+        }
+    </style>
+
+    @section scripts{
+        <script src="~/Scripts/jquery.filedrop.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('#dropArea').filedrop({
+                    url: '@Url.Action("Attachments", "UploadFiles")',
+                    allowedfiletypes: ['image/jpeg', 'image/png', 'image/gif'],
+                    allowedfileextensions: ['.jpg', '.jpeg', '.png', '.gif'],
+                    paramname: 'files',
+                    maxfiles: 5,
+                    maxfilesize: 5, // in MB
+                    dragOver: function () {
+                        $('#dropArea').addClass('active-drop');
+                    },
+                    dragLeave: function () {
+                        $('#dropArea').removeClass('active-drop');
+                    },
+                    drop: function () {
+                        $('#dropArea').removeClass('active-drop');
+                    },
+                    afterAll: function (e) {
+                        $('#dropArea').html('file(s) uploaded successfully');
+                    },
+                    uploadFinished: function (i, file, response, time) {
+                        $('#uploadList').append('<li class="list-group-item">'+file.name+'</li>')
+                    }
+                })
+            })
+        </script>
+    }*@
+

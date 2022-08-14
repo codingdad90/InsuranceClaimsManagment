@@ -1,0 +1,74 @@
+﻿@model Claims.Models.ClaimAction
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ClaimAction</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DollarAmount)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DollarAmount)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Note)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Note)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Action.ActionType)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Action.ActionType)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Adjustor.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Adjustor.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Claim.ClaimId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Claim.ClaimId)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ClaimActionId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

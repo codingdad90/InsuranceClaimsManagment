@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Action">
+    <Key>
+      <PropertyRef Name="ActionId" />
+    </Key>
+    <Property Name="ActionId" Type="Int32" Nullable="false" />
+    <Property Name="ActionType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ClaimActions" Relationship="Self.FK_97" FromRole="Action" ToRole="ClaimAction" />
+  </EntityType>
+  <EntityType Name="Adjustor">
+    <Key>
+      <PropertyRef Name="AdjustorId" />
+    </Key>
+    <Property Name="AdjustorId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsManager" Type="Boolean" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ManagerId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ClaimActions" Relationship="Self.FK_100" FromRole="Adjustor" ToRole="ClaimAction" />
+    <NavigationProperty Name="Claims" Relationship="Self.FK_72" FromRole="Adjustor" ToRole="Claim" />
+    <NavigationProperty Name="Manager" Relationship="Self.FK_75" FromRole="Adjustor" ToRole="Manager" />
+  </EntityType>
+  <EntityType Name="Attachment">
+    <Key>
+      <PropertyRef Name="AttachmentId" />
+    </Key>
+    <Property Name="AttachmentId" Type="Int32" Nullable="false" />
+    <Property Name="Attachment1" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ClaimActionId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ClaimAction" Relationship="Self.FK_112" FromRole="Attachment" ToRole="ClaimAction" />
+  </EntityType>
+  <EntityType Name="Claim">
+    <Key>
+      <PropertyRef Name="ClaimId" />
+    </Key>
+    <Property Name="ClaimId" Type="Int32" Nullable="false" />
+    <Property Name="AdjustorId" Type="Int32" Nullable="false" />
+    <Property Name="PropertyId" Type="Int32" Nullable="false" />
+    <Property Name="DateOfLoss" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Attachment" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Reserves" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Deductable" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="AmountPaid" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Status" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Adjustor" Relationship="Self.FK_72" FromRole="Claim" ToRole="Adjustor" />
+    <NavigationProperty Name="Property" Relationship="Self.FK_43" FromRole="Claim" ToRole="Property" />
+    <NavigationProperty Name="ClaimActions" Relationship="Self.FK_90" FromRole="Claim" ToRole="ClaimAction" />
+  </EntityType>
+  <EntityType Name="ClaimAction">
+    <Key>
+      <PropertyRef Name="ClaimActionId" />
+    </Key>
+    <Property Name="ClaimActionId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DollarAmount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ClaimId" Type="Int32" Nullable="false" />
+    <Property Name="ActionId" Type="Int32" Nullable="false" />
+    <Property Name="AdjustorId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Action" Relationship="Self.FK_97" FromRole="ClaimAction" ToRole="Action" />
+    <NavigationProperty Name="Adjustor" Relationship="Self.FK_100" FromRole="ClaimAction" ToRole="Adjustor" />
+    <NavigationProperty Name="Attachments" Relationship="Self.FK_112" FromRole="ClaimAction" ToRole="Attachment" />
+    <NavigationProperty Name="Claim" Relationship="Self.FK_90" FromRole="ClaimAction" ToRole="Claim" />
+  </EntityType>
+  <EntityType Name="Insured">
+    <Key>
+      <PropertyRef Name="InsuredId" />
+    </Key>
+    <Property Name="InsuredId" Type="Int32" Nullable="false" />
+    <Property Name="MailingAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Zip" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Properties" Relationship="Self.FK_24" FromRole="Insured" ToRole="Property" />
+    <Property Name="Name_First" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name_Last" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Manager">
+    <Key>
+      <PropertyRef Name="ManagerId" />
+    </Key>
+    <Property Name="ManagerId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Adjustors" Relationship="Self.FK_75" FromRole="Manager" ToRole="Adjustor" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+    </Key>
+    <Property Name="PropertyId" Type="Int32" Nullable="false" />
+    <Property Name="InsuredId" Type="Int32" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Zip" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Claims" Relationship="Self.FK_43" FromRole="Property" ToRole="Claim" />
+    <NavigationProperty Name="Insured" Relationship="Self.FK_24" FromRole="Property" ToRole="Insured" />
+    <Property Name="City" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_97">
+    <End Role="Action" Type="Self.Action" Multiplicity="1" />
+    <End Role="ClaimAction" Type="Self.ClaimAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Action">
+        <PropertyRef Name="ActionId" />
+      </Principal>
+      <Dependent Role="ClaimAction">
+        <PropertyRef Name="ActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_100">
+    <End Role="Adjustor" Type="Self.Adjustor" Multiplicity="1" />
+    <End Role="ClaimAction" Type="Self.ClaimAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adjustor">
+        <PropertyRef Name="AdjustorId" />
+      </Principal>
+      <Dependent Role="ClaimAction">
+        <PropertyRef Name="AdjustorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_72">
+    <End Role="Adjustor" Type="Self.Adjustor" Multiplicity="1" />
+    <End Role="Claim" Type="Self.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Adjustor">
+        <PropertyRef Name="AdjustorId" />
+      </Principal>
+      <Dependent Role="Claim">
+        <PropertyRef Name="AdjustorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_75">
+    <End Role="Manager" Type="Self.Manager" Multiplicity="1" />
+    <End Role="Adjustor" Type="Self.Adjustor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manager">
+        <PropertyRef Name="ManagerId" />
+      </Principal>
+      <Dependent Role="Adjustor">
+        <PropertyRef Name="ManagerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_112">
+    <End Role="ClaimAction" Type="Self.ClaimAction" Multiplicity="1" />
+    <End Role="Attachment" Type="Self.Attachment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ClaimAction">
+        <PropertyRef Name="ClaimActionId" />
+      </Principal>
+      <Dependent Role="Attachment">
+        <PropertyRef Name="ClaimActionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_43">
+    <End Role="Property" Type="Self.Property" Multiplicity="1" />
+    <End Role="Claim" Type="Self.Claim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="PropertyId" />
+      </Principal>
+      <Dependent Role="Claim">
+        <PropertyRef Name="PropertyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_90">
+    <End Role="Claim" Type="Self.Claim" Multiplicity="1" />
+    <End Role="ClaimAction" Type="Self.ClaimAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Claim">
+        <PropertyRef Name="ClaimId" />
+      </Principal>
+      <Dependent Role="ClaimAction">
+        <PropertyRef Name="ClaimId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_24">
+    <End Role="Insured" Type="Self.Insured" Multiplicity="1" />
+    <End Role="Property" Type="Self.Property" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Insured">
+        <PropertyRef Name="InsuredId" />
+      </Principal>
+      <Dependent Role="Property">
+        <PropertyRef Name="InsuredId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ClaimsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Actions" EntityType="Self.Action" />
+    <EntitySet Name="Adjustors" EntityType="Self.Adjustor" />
+    <EntitySet Name="Attachments" EntityType="Self.Attachment" />
+    <EntitySet Name="Claims" EntityType="Self.Claim" />
+    <EntitySet Name="ClaimActions" EntityType="Self.ClaimAction" />
+    <EntitySet Name="Insureds" EntityType="Self.Insured" />
+    <EntitySet Name="Managers" EntityType="Self.Manager" />
+    <EntitySet Name="Properties" EntityType="Self.Property" />
+    <AssociationSet Name="FK_97" Association="Self.FK_97">
+      <End Role="Action" EntitySet="Actions" />
+      <End Role="ClaimAction" EntitySet="ClaimActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_100" Association="Self.FK_100">
+      <End Role="Adjustor" EntitySet="Adjustors" />
+      <End Role="ClaimAction" EntitySet="ClaimActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_72" Association="Self.FK_72">
+      <End Role="Adjustor" EntitySet="Adjustors" />
+      <End Role="Claim" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_75" Association="Self.FK_75">
+      <End Role="Manager" EntitySet="Managers" />
+      <End Role="Adjustor" EntitySet="Adjustors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_112" Association="Self.FK_112">
+      <End Role="ClaimAction" EntitySet="ClaimActions" />
+      <End Role="Attachment" EntitySet="Attachments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_43" Association="Self.FK_43">
+      <End Role="Property" EntitySet="Properties" />
+      <End Role="Claim" EntitySet="Claims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_90" Association="Self.FK_90">
+      <End Role="Claim" EntitySet="Claims" />
+      <End Role="ClaimAction" EntitySet="ClaimActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_24" Association="Self.FK_24">
+      <End Role="Insured" EntitySet="Insureds" />
+      <End Role="Property" EntitySet="Properties" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,41 @@
+PIG Report 1
+  Date - 1/17/2021
+  
+//Progress//
+  Worked on EDMX blueprint for database. It is mostly done.
+  
+//Issues//
+  None so far.
+  
+//Goals//
+  Double check database layout to make sure it doesn't violate any form rules. (Next week)
+  Translate database blueprint into actual database. (Next week)
+
+
+PIG Report 2
+  Date - 1/25/2021
+  
+//Progress//
+  Worked with Maurice to update EDMX blueprint with some new information.
+  
+//Issues//
+  None so far.
+  
+//Goals//
+  Double check database layout to make sure it doesn't violate any form rules. (Next week)
+  Translate database blueprint into actual database. (Next week)
+
+
+PIG Report 3
+  Date - 2/07/2021
+  
+//Progress//
+  Fixed errors related to database issues.
+  Began work on unique view for Adjustor.
+  
+//Issues//
+  It would be helpful for me to have more active feedback from the team on discord. Kirk has been very active, but Maurice is kind of hard to communicate with sometimes.
+  I have a reference object bug I'm having trouble fixing in attempting to get data to display on the page.
+  
+//Goals//
+  Complete and bug test unique view for Adjustor. (Next week)

@@ -1,0 +1,135 @@
+﻿@model IEnumerable<MAKClaims.Models.ClaimAction>
+
+
+
+@if (Model.Count() > 0)
+{
+   
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Claim.ClaimId)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Action.ActionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adjustor.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DollarAmount)
+            </th>
+            <th>Address</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.Date, "{0:MM/dd/yyyy}")*@ @Convert.ToString(string.Format("{0:MM/dd/yyyy}", item.Date))
+                </td>
+                <td>
+                    @Html.ActionLink(item.Claim.ClaimId.ToString(), "ClaimDetails", "Manualviews", new { id = item.ClaimId }, null)
+                </td>
+                <td>
+                    @Html.ActionLink(item.Note.ToString(), "ClaimActionedit", "ManualViews", new { id = item.ClaimActionId }, new { area=""})
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Action.ActionType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adjustor.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DollarAmount)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Claim.Property.Address)
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+else
+{
+    <div>No Tasks to Display</div>
+}
+
+@*@else
+    {
+        if (this.User.IsInRole("Adjustor"))
+        {
+            if (Model.Count() > 0)
+            {
+                <p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Date)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DollarAmount)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Note)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Action.ActionType)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Adjustor.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Claim.ClaimId)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DollarAmount)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Note)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Action.ActionType)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Adjustor.Name)
+                            </td>
+                            <td>
+                                @Html.ActionLink(item.Claim.ClaimId.ToString(), "ClaimDetails2", "Manualviews", new { id = item.ClaimId }, null)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.ClaimActionId }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.ClaimActionId }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.ClaimActionId })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            }
+            else
+            {
+                <div>No Tasks to Display</div>
+            }
+        }*@
+

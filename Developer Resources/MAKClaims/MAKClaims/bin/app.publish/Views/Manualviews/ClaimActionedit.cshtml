@@ -1,0 +1,98 @@
+﻿@model MAKClaims.Models.ClaimAction
+
+
+
+<h2>Close Task</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.ClaimActionId)
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Convert.ToString(string.Format("{0:MM/dd/yyyy}", Model.Date))
+            @*@Html.DisplayFor(model => model.Date)*@
+            @Html.HiddenFor(m => m.Date)
+
+            @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.DollarAmount, "Dollar Amount", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.DollarAmount)
+            @Html.HiddenFor(m => m.DollarAmount)
+            @Html.ValidationMessageFor(model => model.DollarAmount, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Note, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Note)
+            @Html.HiddenFor(m => m.Note)
+
+            @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.ClaimId, "Claim Number", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.ClaimId)
+            @Html.HiddenFor(m => m.ClaimId)
+            @*@Html.DropDownList("ClaimId", null, htmlAttributes: new { @class = "form-control" })*@
+            @Html.ValidationMessageFor(model => model.ClaimId, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @*@Html.LabelFor(model => model.ActionId, "ActionId", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => model.ActionId)*@
+        @Html.HiddenFor(m => m.ActionId)
+        @*@Html.DropDownList("ActionId", null, htmlAttributes: new { @class = "form-control" })*@
+        @Html.ValidationMessageFor(model => model.ActionId, "", new { @class = "text-danger" })
+        @*</div>*@
+    </div>
+
+    <div class="form-group">
+        @*
+        @Html.LabelFor(model => model.AdjustorId, "AdjustorId", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.AdjustorId);*@
+        @Html.HiddenFor(m => m.AdjustorId)
+        @*@Html.DropDownList("AdjustorId", null, htmlAttributes: new { @class = "form-control" })*@
+        @Html.ValidationMessageFor(model => model.AdjustorId, "", new { @class = "text-danger" })
+        @*</div>*@
+    </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Complete, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Complete)
+                    @Html.ValidationMessageFor(model => model.Complete, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Tasks", "Manualviews", new { area = "" })
+</div>

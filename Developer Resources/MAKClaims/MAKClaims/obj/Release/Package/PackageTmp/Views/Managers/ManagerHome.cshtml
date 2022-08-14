@@ -1,0 +1,86 @@
+﻿@model IEnumerable<MAKClaims.Models.Adjustor>
+ 
+
+@{
+    ViewBag.Title = "ManagerHome";
+}
+<style>
+    .table {
+        
+        border-collapse: collapse;     
+    }
+    .table th,
+    .table td {
+        padding: 10px;
+        
+    }
+    .table th {
+        background: #f4f6f9 ;
+       
+    }
+        .table.sticky th {
+            position: sticky;
+            top: 0;
+        }
+</style>
+
+<h2>Hello!</h2>
+<div>
+    @Html.ViewData["Welcome"]
+</div>
+
+
+
+
+
+    <table class="table sticky">
+        <tr>
+            <th>
+                @Html.ActionLink(Html.DisplayNameFor(model => model.Name).ToString(), "ManagerHome", new { sortOrder = ViewBag.AdjustorNameSort })
+            </th>
+            <th>
+                @Html.ActionLink((Html.DisplayNameFor(model => model.TotalDeductable)).ToHtmlString(), "ManagerHome", new { sortOrder = ViewBag.DeductableSort })
+            </th>
+            <th>
+                @Html.ActionLink((Html.DisplayNameFor(model => model.TotalReserve)).ToString(), "ManagerHome", new { sortOrder = ViewBag.ReserveSort })
+            </th>
+            <th>
+                @Html.ActionLink((Html.DisplayNameFor(model => model.TotalClaim)).ToString(), "ManagerHome", new { sortOrder = ViewBag.ClaimTotalSort })
+            </th>
+            <th>
+                @Html.ActionLink((Html.DisplayNameFor(model => model.TotalAmoutPaid)).ToString(), "ManagerHome", new { sortOrder = ViewBag.AmountPaidSort })
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.Name.ToString(), "AdjustorView", "Managers", new { id = item.AdjustorId }, null)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalDeductable)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalReserve)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalClaim)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalAmoutPaid)
+                </td>
+
+
+
+                @*<td>
+                        @Html.ActionLink("Edit", "Edit", "Adjustor", new { id = item.AdjustorId }, null) |
+                        @Html.ActionLink("Details", "Details", "Adjustor", new { id = item.AdjustorId }, null) |
+                        @Html.ActionLink("Delete", "Delete", "Adjustor", new { id = item.AdjustorId }, null)
+                    </td>*@
+            </tr>
+        }
+
+    </table>

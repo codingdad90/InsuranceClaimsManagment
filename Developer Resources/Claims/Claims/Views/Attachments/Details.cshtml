@@ -1,0 +1,42 @@
+﻿@model Claims.Models.Attachment
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Attachment</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Attachment1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Attachment1)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ClaimAction.Note)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ClaimAction.Note)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.AttachmentId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

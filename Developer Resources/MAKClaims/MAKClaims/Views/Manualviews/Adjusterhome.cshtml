@@ -1,0 +1,112 @@
+﻿
+
+
+@model IEnumerable<MAKClaims.Models.Claim>
+
+@*@{
+    Layout = "~/Views/Shared/_Adjusterlayout.cshtml";
+}*@
+<style>
+    .table {
+        border-collapse: collapse;
+    }
+
+        .table th,
+        .table td {
+            padding: 10px;
+        }
+
+        .table th {
+            background: #f4f6f9;
+        }
+
+        .table.sticky th {
+            position: sticky;
+            top: 0;
+        }
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+</head>
+<body>
+    
+    <table class="table sticky">
+        <tr>
+            <th>
+                @Html.ActionLink((Html.DisplayNameFor(model=>model.ClaimId)).ToString(), "Adjusterhome", new {sortOrder=ViewBag.ClaimNumSortParm})
+            </th>
+            <th>
+                @Html.ActionLink((Html.DisplayNameFor(model => model.DateOfLoss)).ToString(), "Adjusterhome", new  { sortOrder = ViewBag.DateSortParm })
+            </th>
+            <th>
+                @Html.ActionLink("Insured", "Adjusterhome", new {sortOrder = ViewBag.NameSortParm })
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property.Address)
+            </th>
+            <th>
+                @Html.ActionLink((Html.DisplayNameFor(model => model.Reserves)).ToString(), "Adjusterhome", new {SortOrder = ViewBag.ReservesSortParm})
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deductable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPaid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adjustor.Name)
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>
+            @Html.ActionLink(item.ClaimId.ToString(), "ClaimDetails", "Manualviews", new { id = item.ClaimId }, null)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfLoss)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.Insured.Name_Last)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Property.Address)
+        </td>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Reserves)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Deductable)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AmountPaid)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adjustor.Name)
+        </td>
+
+        @*<td>Currently not using these in this context but may in the future.  Leaving for now -MA
+            @Html.ActionLink("Edit", "Edit", new { id = item.ClaimId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ClaimId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ClaimId })
+        </td>*@
+    </tr>
+        }
+
+    </table>
+</body>
+</html>

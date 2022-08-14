@@ -1,0 +1,269 @@
+﻿@*@{
+        ViewBag.Title = "ClaimDetails";
+    }*@
+
+<h2>ClaimDetails</h2>
+@*@model MAKClaims.Models.Claim*@
+@model MAKClaims.Models.ClaimAction
+
+<script src="~/Scripts/jquery-3.6.0.min.js"></script>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Claim</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Date Of Loss
+            </dt>
+
+            <dd>
+                @Convert.ToString(string.Format("{0:MM/dd/yyyy}", ViewBag.Claim.DateOfLoss))
+            </dd>
+
+
+
+            <dt>
+                Reserves
+            </dt>
+
+            <dd>
+                @ViewBag.Claim.Reserves
+            </dd>
+
+            <dt>
+                Deductable
+            </dt>
+
+            <dd>
+                @ViewBag.Claim.Deductable
+            </dd>
+
+            <dt>
+                AmountPaid
+            </dt>
+
+            <dd>
+                @ViewBag.Claim.AmountPaid
+            </dd>
+
+            <dt>
+                Status
+            </dt>
+
+            <dd>
+                @ViewBag.Claim.Status
+            </dd>
+
+            <dt>
+                Adjustor
+            </dt>
+
+            <dd>
+                @ViewBag.AdjustorName
+            </dd>
+
+            <dt>
+                Property Address
+            </dt>
+
+            <dd>
+                @ViewBag.Claim.Property.Address
+            </dd>
+
+        </dl>
+    </div>
+
+    @*<p>
+
+            @Html.ActionLink("Add Action", "AddClaimAction", new { id = ViewBag.ClaimId })
+        </p>*@
+
+    @if (this.User.IsInRole("Adjustor"))
+    {
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#newactivityymodal"> Add a Task</a>
+    }
+    @*@if (this.User.IsInRole("Manager"))
+        {
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#newtaskmodal"> Add a Task for the assigned adjuster</a>
+            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#newtask2modal">Add a Task for any adjuster</a>
+        }*@
+    <h4>Claim actions</h4>
+
+    <table class="table">
+        <tr>
+            <th>
+                Date
+            </th>
+            <th>
+                Action
+            </th>
+            <th>
+                Adjuster
+            </th>
+            <th>
+                Dollar Amount
+            </th>
+            <th>
+                Note
+            </th>
+
+        </tr>
+
+        @foreach (var item in ViewBag.ClaimActions)
+        {
+            <tr>
+                <td>
+                    @Convert.ToString(string.Format("{0:MM/dd/yyyy}", item.Date))
+                </td>
+                <td>
+                    @item.Action.ActionType
+                </td>
+                <td>
+                    @item.Adjustor.Name
+                </td>
+                <td>
+                    @item.DollarAmount
+                </td>
+                <td>
+                    @item.Note
+                </td>
+
+            </tr>
+        }
+    </table>
+    <div class="modal fade" id="newactivityymodal">
+        <div class=" modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"> New Task</h2>
+                </div>
+                <div class="modal-body">
+                    <form id="newcaform">
+                        <label>Date</label>
+                        @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Action</label>
+                        @Html.Hidden("ActionId", "1")<p>Task</p>
+                        <label>Dollar Amount</label>
+                        @Html.EditorFor(model => model.DollarAmount, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Note</label>
+                        @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Claim</label>
+                        @Html.DropDownList("ClaimId", null, htmlAttributes: new { @class = "form-control" })
+                        <label>Adjuster</label>
+                        @Html.DropDownList("AdjustorId", null, htmlAttributes: new { @class = "form-control" })
+
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <a href="#" id="btnSave" class="btn btn-primary mr-2"> Add Task</a>
+                        <a href="" id="btnCancel" class="btn btn-danger"> Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="modal fade" id="newtaskmodal">
+            <div class=" modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"> New Task</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form id="newtaskform">
+                            <label>Date</label>
+                            @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                            <label>Action</label>
+                            @Html.Hidden("ActionId", "1")Task
+                            <label>Dollar Amount</label>
+                            @Html.EditorFor(model => model.DollarAmount, new { htmlAttributes = new { @class = "form-control" } })
+                            <label>Note</label>
+                            @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
+                            <label>Claim</label>
+                            @Html.DropDownList("ClaimId", null, htmlAttributes: new { @class = "form-control" })
+                            <label>Adjuster</label>
+                            @Html.DropDownList("AssignAd", null, htmlAttributes: new { @class = "form-control" })
+
+
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group">
+                            <a href="#" id="btnSave1" class="btn btn-primary mr-2"> Add Task</a>
+                            <a href="" id="btnCancel" class="btn btn-danger"> Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="newtask2modal">
+            <div class=" modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title"> New Task</h2>
+                    </div>
+                    <div class="modal-body">
+                        <form id="newtaskform2">
+                            <label>Date</label>
+                            @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                            <label>Action</label>
+                            @Html.Hidden("ActionId", "1")Task
+                            <label>Dollar Amount</label>
+                            @Html.EditorFor(model => model.DollarAmount, new { htmlAttributes = new { @class = "form-control" } })
+                            <label>Note</label>
+                            @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
+                            <label>Claim</label>
+                            @Html.DropDownList("ClaimId", null, htmlAttributes: new { @class = "form-control" })
+                            <label>Adjuster</label>
+                            @Html.DropDownList("AllAd", null, htmlAttributes: new { @class = "form-control" })
+
+
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="btn-group">
+                            <a href="#" id="btnSave2" class="btn btn-primary mr-2"> Add Task</a>
+                            <a href="" id="btnCancel" class="btn btn-danger"> Cancel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+</body>
+
+
+</html>
+<script>
+    $(document).ready(function () {
+        $("#btnSave").click(function () {
+
+            var newcaform = $("#newcaform").serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "/ManualViews/AddClaimActionModal",
+                data: newcaform,
+                success: function () {
+                    window.location.href = " ";
+                },
+
+            })
+        })
+    })
+
+
+</script>
+
+

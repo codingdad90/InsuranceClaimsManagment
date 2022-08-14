@@ -1,0 +1,248 @@
+-- ****************** SqlDBM: Microsoft SQL Server ******************
+-- ******************************************************************
+
+-- ************************************** [Manager]
+
+CREATE TABLE [Manager]
+(
+ [ManagerId]   int NOT NULL ,
+ [Name]        varchar(50) NOT NULL ,
+ [PhoneNumber] varchar(15) NOT NULL ,
+ [Email]       varchar(50) NOT NULL ,
+
+
+ CONSTRAINT [PK_manager] PRIMARY KEY CLUSTERED ([ManagerId] ASC)
+);
+GO
+
+
+
+
+
+
+
+
+-- ************************************** [Insured]
+
+CREATE TABLE [Insured]
+(
+ [InsuredId]      int NOT NULL ,
+ [Name]           varchar(50) NOT NULL ,
+ [MailingAddress] varchar(50) NOT NULL ,
+ [State]          varchar(50) NOT NULL ,
+ [Zip]            int NOT NULL ,
+ [PhoneNumber]    varchar(15) NOT NULL ,
+ [Email]          varchar(50) NOT NULL ,
+
+
+ CONSTRAINT [PK_insured] PRIMARY KEY CLUSTERED ([InsuredId] ASC)
+);
+GO
+
+
+
+
+
+
+
+
+-- ************************************** [Action]
+
+CREATE TABLE [Action]
+(
+ [ActionId]   int NOT NULL ,
+ [ActionType] varchar(50) NOT NULL ,
+
+
+ CONSTRAINT [PK_action] PRIMARY KEY CLUSTERED ([ActionId] ASC)
+);
+GO
+
+
+
+
+
+
+
+
+-- ************************************** [Property]
+
+CREATE TABLE [Property]
+(
+ [PropertyId] int NOT NULL ,
+ [InsuredId]  int NOT NULL ,
+ [Address]    varchar(50) NOT NULL ,
+ [State]      varchar(50) NOT NULL ,
+ [Zip]        int NOT NULL ,
+
+
+ CONSTRAINT [PK_property] PRIMARY KEY CLUSTERED ([PropertyId] ASC),
+ CONSTRAINT [FK_24] FOREIGN KEY ([InsuredId])  REFERENCES [Insured]([InsuredId])
+);
+GO
+
+
+CREATE NONCLUSTERED INDEX [fkIdx_25] ON [Property] 
+ (
+  [InsuredId] ASC
+ )
+
+GO
+
+
+
+
+
+
+
+-- ************************************** [Adjustor]
+
+CREATE TABLE [Adjustor]
+(
+ [AdjustorId]  int NOT NULL ,
+ [Name]        varchar(50) NOT NULL ,
+ [PhoneNumber] varchar(15) NOT NULL ,
+ [Email]       varchar(50) NOT NULL ,
+ [IsManager]   bit NOT NULL ,
+ [Password]    varchar(50) NOT NULL ,
+ [ManagerId]   int NOT NULL ,
+
+
+ CONSTRAINT [PK_adjustor] PRIMARY KEY CLUSTERED ([AdjustorId] ASC),
+ CONSTRAINT [FK_75] FOREIGN KEY ([ManagerId])  REFERENCES [Manager]([ManagerId])
+);
+GO
+
+
+CREATE NONCLUSTERED INDEX [fkIdx_76] ON [Adjustor] 
+ (
+  [ManagerId] ASC
+ )
+
+GO
+
+
+
+
+
+
+
+-- ************************************** [Claim]
+
+CREATE TABLE [Claim]
+(
+ [ClaimId]    int NOT NULL ,
+ [AdjustorId] int NOT NULL ,
+ [PropertyId] int NOT NULL ,
+ [DateOfLoss] datetime NOT NULL ,
+ [Attachment] varbinary(max) NULL ,
+ [Reserves]   money NOT NULL ,
+ [Deductable] money NOT NULL ,
+ [AmountPaid] money NOT NULL ,
+ [Status]     bit NOT NULL ,
+
+
+ CONSTRAINT [PK_claim] PRIMARY KEY CLUSTERED ([ClaimId] ASC),
+ CONSTRAINT [FK_43] FOREIGN KEY ([PropertyId])  REFERENCES [Property]([PropertyId]),
+ CONSTRAINT [FK_72] FOREIGN KEY ([AdjustorId])  REFERENCES [Adjustor]([AdjustorId])
+);
+GO
+
+
+CREATE NONCLUSTERED INDEX [fkIdx_44] ON [Claim] 
+ (
+  [PropertyId] ASC
+ )
+
+GO
+
+CREATE NONCLUSTERED INDEX [fkIdx_73] ON [Claim] 
+ (
+  [AdjustorId] ASC
+ )
+
+GO
+
+
+
+
+
+
+
+-- ************************************** [ClaimAction]
+
+CREATE TABLE [ClaimAction]
+(
+ [ClaimActionId] int NOT NULL ,
+ [Date]          datetime NOT NULL ,
+ [DollarAmount]  money NULL ,
+ [Note]          varchar(max) NOT NULL ,
+ [ClaimId]       int NOT NULL ,
+ [ActionId]      int NOT NULL ,
+ [AdjustorId]    int NOT NULL ,
+
+
+ CONSTRAINT [PK_table_90] PRIMARY KEY CLUSTERED ([ClaimActionId] ASC),
+ CONSTRAINT [FK_100] FOREIGN KEY ([AdjustorId])  REFERENCES [Adjustor]([AdjustorId]),
+ CONSTRAINT [FK_90] FOREIGN KEY ([ClaimId])  REFERENCES [Claim]([ClaimId]),
+ CONSTRAINT [FK_97] FOREIGN KEY ([ActionId])  REFERENCES [Action]([ActionId])
+);
+GO
+
+
+CREATE NONCLUSTERED INDEX [fkIdx_101] ON [ClaimAction] 
+ (
+  [AdjustorId] ASC
+ )
+
+GO
+
+CREATE NONCLUSTERED INDEX [fkIdx_91] ON [ClaimAction] 
+ (
+  [ClaimId] ASC
+ )
+
+GO
+
+CREATE NONCLUSTERED INDEX [fkIdx_98] ON [ClaimAction] 
+ (
+  [ActionId] ASC
+ )
+
+GO
+
+
+
+
+
+
+
+-- ************************************** [Attachment]
+
+CREATE TABLE [Attachment]
+(
+ [AttachmentId]  int NOT NULL ,
+ [Attachment]    varbinary(max) NOT NULL ,
+ [ClaimActionId] int NOT NULL ,
+
+
+ CONSTRAINT [PK_attachment] PRIMARY KEY CLUSTERED ([AttachmentId] ASC),
+ CONSTRAINT [FK_112] FOREIGN KEY ([ClaimActionId])  REFERENCES [ClaimAction]([ClaimActionId])
+);
+GO
+
+
+CREATE NONCLUSTERED INDEX [fkIdx_113] ON [Attachment] 
+ (
+  [ClaimActionId] ASC
+ )
+
+GO
+
+
+
+
+
+
+
+

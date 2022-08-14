@@ -1,0 +1,281 @@
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\MAKClaims.dll.config
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\MAKClaims.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\MAKClaims.pdb
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\csc.exe
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\csc.exe.config
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\csc.rsp
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\csi.exe
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\csi.exe.config
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\csi.rsp
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.AppContext.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Console.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.IO.Compression.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Net.Http.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Net.Sockets.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.ValueTuple.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Xml.XPath.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\vbc.exe
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\vbc.exe.config
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\vbc.rsp
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\VBCSCompiler.exe
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Antlr3.Runtime.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\EntityFramework.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\EntityFramework.SqlServer.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Newtonsoft.Json.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Owin.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.Helpers.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.Mvc.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.Optimization.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.Razor.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.WebPages.Deployment.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.WebPages.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.WebPages.Razor.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\WebGrease.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.Helpers.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.Mvc.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.Optimization.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.Razor.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.WebPages.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.WebPages.Deployment.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\System.Web.WebPages.Razor.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Newtonsoft.Json.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Antlr3.Runtime.pdb
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\EntityFramework.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\EntityFramework.SqlServer.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\obj\Debug\MAKClaims.csproj.CoreCompileInputs.cache
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\obj\Debug\MAKClaims.csproj.CopyComplete
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\obj\Debug\MAKClaims.dll
+C:\Users\captk\source\repos\MAKClaims\MAKClaims\obj\Debug\MAKClaims.pdb
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\MAKClaims.dll.config
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\MAKClaims.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\MAKClaims.pdb
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csc.exe
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csc.exe.config
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csc.rsp
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csi.exe
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csi.exe.config
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csi.rsp
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\vbc.exe
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\vbc.exe.config
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\vbc.rsp
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\VBCSCompiler.exe
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Antlr3.Runtime.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\EntityFramework.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\EntityFramework.SqlServer.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Newtonsoft.Json.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Owin.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Helpers.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Mvc.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Optimization.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Razor.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.Deployment.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.Razor.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\WebGrease.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\EntityFramework.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\EntityFramework.SqlServer.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Helpers.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Mvc.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Optimization.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Razor.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.Deployment.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.Razor.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Newtonsoft.Json.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Antlr3.Runtime.pdb
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.csproj.CoreCompileInputs.cache
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.csproj.CopyComplete
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.pdb
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Buffers.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Memory.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\MAKClaims.dll.config
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\MAKClaims.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\MAKClaims.pdb
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csc.exe
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csc.exe.config
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csc.rsp
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csi.exe
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csi.exe.config
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\csi.rsp
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Buffers.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Memory.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\vbc.exe
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\vbc.exe.config
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\vbc.rsp
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\VBCSCompiler.exe
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Antlr3.Runtime.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\EntityFramework.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\EntityFramework.SqlServer.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Newtonsoft.Json.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Owin.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Helpers.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Mvc.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Optimization.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Razor.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.Deployment.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.Razor.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\WebGrease.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\EntityFramework.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\EntityFramework.SqlServer.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Newtonsoft.Json.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Helpers.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Mvc.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Optimization.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.Razor.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.Deployment.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\System.Web.WebPages.Razor.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Antlr3.Runtime.pdb
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.csproj.CoreCompileInputs.cache
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.csproj.CopyComplete
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.dll
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.pdb
+C:\Users\captk\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.csprojAssemblyReference.cache
+C:\Users\mauri\Documents\GitHub\claims-management-claims\Developer Resources\MAKClaims\MAKClaims\obj\Debug\MAKClaims.csprojAssemblyReference.cache

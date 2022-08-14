@@ -1,0 +1,367 @@
+﻿@*@{
+        ViewBag.Title = "ClaimDetails";
+    }*@
+
+<h3><small>Insured: </small> <span style="color:cadetblue">@ViewBag.IName</span> </h3>
+
+<h4><small>Adjustor: </small> <span style="color:cadetblue"> @ViewBag.AdjusterName</span>  <small>  Claim #@ViewBag.Claim.ClaimId </small></h4>
+
+@*@model MAKClaims.Models.Claim*@
+@model MAKClaims.Models.ClaimAction
+
+<script src="~/Scripts/jquery-3.6.0.min.js"></script>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        .column {
+            flex: 50%;
+            padding: 5px;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 16px;
+        }
+
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        /*tr:nth-child(odd) {
+            background-color: cadetblue;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <table>
+                <tr>
+                    <th>Date Of Loss</th>
+                    <td>@Convert.ToString(string.Format("{0:MM/dd/yyyy}", ViewBag.Claim.DateOfLoss))</td>
+                </tr>
+                <tr>
+                    <th>Reserves</th>
+                    <td>@ViewBag.Claim.Reserves.ToString("C2")</td>
+                </tr>
+                <tr>
+                    <th>Deductable</th>
+                    <td>@ViewBag.Claim.Deductable.ToString("C2")</td>
+                </tr>
+                <tr>
+                    <th>AmountPaid</th>
+                    <td>@ViewBag.Claim.AmountPaid.ToString("C2")</td>
+                </tr>
+                <tr>
+                    <th>Active</th>
+                    <td>@ViewBag.Claim.Status</td>
+                </tr>
+                <tr>
+                    <th>Property Address</th>
+                    <td>@ViewBag.Claim.Property.Address</td>
+                </tr>
+            </table>
+        </div>
+        <div class="column">
+            <table>
+                <tr>
+                    <th>Attachments</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                @foreach (var file in ViewBag.FileNames)
+                {
+                    <tr>
+                        <td>@file.AttachmentName</td>
+                        <td><a href="javascript:;" onclick="DownloadFile(@file.AttachmentId)">View</a></td>
+                    </tr>
+
+                }
+
+            </table>
+            @using (Html.BeginForm("Download", "Attachments", FormMethod.Post, new { target = "_blank" }))
+            {
+                <input type="hidden" id="hfFileId" name="id" />
+                <input type="submit" id="btnDownload" value="Download" style="display:none" />
+            }
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script type="text/javascript">
+                function DownloadFile(id) {
+                    $("#hfFileId").val(id);
+                    $("#btnDownload")[0].click();
+                };
+            </script>
+
+            @using (Html.BeginForm("Upload",
+                   "Attachments", new { cid = @ViewBag.Claim.ClaimId },
+                   FormMethod.Post,
+                   new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.ClaimId)
+
+
+                <div class="form-group">
+                    @Html.Label("Attachment", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <input type="file" name="upload" id="upload" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Submit" class="btn btn-default" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+
+    @*<p>
+
+            @Html.ActionLink("Add Action", "AddClaimAction", new { id = ViewBag.ClaimId })
+        </p>*@
+
+    @if (this.User.IsInRole("Adjustor"))
+    {
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#newactivityymodal"> Add a Claim Action</a>
+    }
+    @if (this.User.IsInRole("Manager"))
+    {
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#newtaskmodal"> Add a Task for the assigned adjuster</a>
+        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#newtask2modal">Add a Task for any adjuster</a>
+    }
+    <h4>Claim actions</h4>
+
+    <table class="table">
+        <tr>
+            <th>
+                Date
+            </th>
+            <th>
+                Action
+            </th>
+            <th>
+                Adjuster
+            </th>
+            <th>
+                Dollar Amount
+            </th>
+            <th>
+                Note
+            </th>
+
+        </tr>
+
+        @foreach (var item in ViewBag.ClaimActions)
+        {
+            <tr>
+                <td>
+                    @Convert.ToString(string.Format("{0:MM/dd/yyyy}", item.Date))
+                </td>
+                <td>
+                    @item.Action.ActionType
+                </td>
+                <td>
+                    @item.Adjustor.Name
+                </td>
+                <td>
+                    @if (item.DollarAmount != null)
+                    {
+                        @(((decimal)item.DollarAmount).ToString("C2"));
+                    }
+                    else
+                    {
+                        @item.DollarAmount;
+                    }
+                </td>
+                <td>
+                    @item.Note
+                </td>
+
+            </tr>
+        }
+    </table>
+    <div class="modal fade" id="newactivityymodal">
+        <div class=" modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"> New Claim Activity</h2>
+                </div>
+                <div class="modal-body">
+                    <form id="newcaform">
+                        <label>Date</label>
+                        @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Action</label>
+                        @Html.DropDownList("ActionId", null, htmlAttributes: new { @class = "form-control" })
+                        <label>Dollar Amount</label>
+                        @Html.EditorFor(model => model.DollarAmount, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Note</label>
+                        @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Claim</label>
+                        @Html.DropDownList("ClaimId", null, htmlAttributes: new { @class = "form-control" })
+                        <label>Adjuster</label>
+                        @Html.DropDownList("AdjustorId", null, htmlAttributes: new { @class = "form-control" })
+
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <a href="#" id="btnSave" class="btn btn-primary mr-2"> Add Claim Activity</a>
+                        <a href="" id="btnCancel" class="btn btn-danger"> Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="newtaskmodal">
+        <div class=" modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"> New Task</h2>
+                </div>
+                <div class="modal-body">
+                    <form id="newtaskform">
+                        <label>Date</label>
+                        @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Action</label>
+                        @Html.Hidden("ActionId", "1")Task
+                        <label>Dollar Amount</label>
+                        @Html.EditorFor(model => model.DollarAmount, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Note</label>
+                        @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Claim</label>
+                        @Html.DropDownList("ClaimId", null, htmlAttributes: new { @class = "form-control" })
+                        <label>Adjuster</label>
+                        @Html.DropDownList("AssignAd", null, htmlAttributes: new { @class = "form-control" })
+
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <a href="#" id="btnSave1" class="btn btn-primary mr-2"> Add Task</a>
+                        <a href="" id="btnCancel" class="btn btn-danger"> Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="newtask2modal">
+        <div class=" modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"> New Task</h2>
+                </div>
+                <div class="modal-body">
+                    <form id="newtaskform2">
+                        <label>Date</label>
+                        @Html.EditorFor(model => model.Date, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Action</label>
+                        @Html.Hidden("ActionId", "1")Task
+                        <label>Dollar Amount</label>
+                        @Html.EditorFor(model => model.DollarAmount, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Note</label>
+                        @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
+                        <label>Claim</label>
+                        @Html.DropDownList("ClaimId", null, htmlAttributes: new { @class = "form-control" })
+                        <label>Adjuster</label>
+                        @Html.DropDownList("AllAd", null, htmlAttributes: new { @class = "form-control" })
+
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="btn-group">
+                        <a href="#" id="btnSave2" class="btn btn-primary mr-2"> Add Task</a>
+                        <a href="" id="btnCancel" class="btn btn-danger"> Cancel</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
+<script>
+    $(document).ready(function () {
+        $("#btnSave").click(function () {
+
+            var newcaform = $("#newcaform").serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "http://dotnet.reynolds.edu/ITP298-Claims/ManualViews/AddClaimActionModal",
+                data: newcaform,
+                success: function () {
+                    window.location.href = " ";
+                },
+
+            })
+        })
+    })
+    $(document).ready(function () {
+        $("#btnSave1").click(function () {
+
+            var newcaform = $("#newtaskform").serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "http://dotnet.reynolds.edu/ITP298-Claims/ManualViews/AddClaimActionModal",
+                data: newcaform,
+                success: function () {
+                    window.location.href = " ";
+                },
+
+            })
+        })
+    })
+    $(document).ready(function () {
+        $("#btnSave2").click(function () {
+
+            var newcaform = $("#newtaskform2").serialize();
+
+            $.ajax({
+                type: "POST",
+                url: "http://dotnet.reynolds.edu/ITP298-Claims/ManualViews/AddClaimActionModal",
+                data: newcaform,
+                success: function () {
+                    window.location.href = " ";
+                },
+
+            })
+        })
+    })
+
+
+</script>
+
+

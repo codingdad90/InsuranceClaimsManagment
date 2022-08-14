@@ -1,0 +1,104 @@
+4/25/2021
+Progress: 
+   Got the attachments working for claim details and can display them in a new tab. Added links to create Adjustors and Managers as well as access roles via the managers sidebar.
+   Worked with the team to plan out our presentation.
+
+Issue:
+  No major issues at this time. 
+  
+Goals:
+  Would like to add a seach feature before the final presentation  
+  
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+4/12/2021
+Progress: 
+   Fixed some low hanging fruit like what links are displayed and default values for claims. Thought through what needs to be done with attachments and now need to implement
+
+Issue:
+  Main issues are with time
+  
+Goals:
+  Attachemnts working fully 
+  
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+3/28/2021
+Progress: 
+  Layout is set and manager view is looking better. Have filtering in place for the different views.
+  Maurice helped me with publishing and was able to fix an issue with the published layout.  
+
+Issue:
+  Wanted and still want an HTML checkbox next to status for the adjustor’s claims views that will filter the displayed my list by what is active and what is not. Have yet to figure it out. 
+  
+Goals:
+  Set charts as links for the manager. Make the claims view more pleasing to look at and editable 
+  
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+3/8/2021
+Progress: 
+  Got a little done with the manager view in terms of showing totals of adjusters claims and reserves as data points and hyperlinking adjuster names
+  worked on the layout a bit, but it is far from ideal as the text is not aligning how I would like it to. 
+
+Issue:
+  Had an issue with passing totals via ViewData and ViewBag. Maurice helped me out by having me put a new property in Adjustor to avoid having to use ViewBag.
+  Having an issue with our Actions. It is not writing to the DB and I am not sure why. Need to investigate more. 
+  
+Goals:
+  One goals is still to bave the manager home view completed a bit more. Need to build out the drill down pages and get it completed. 
+  Work on the layout view to make it a bit more ideal. 
+  Fix what is going on with Action and Claim Acition tables. 
+  
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+2/21/2021
+Progress: 
+  Created a region table to use with managers and adjustors and updated SQLDBM with the schema. Need to talk with Bob to ensure it all looks good.
+  Sent Megan the software blurb for the website. 
+  Started on the Manager Home view
+  Had a meeting with Stacy to go over the web.config database connection for logins
+
+Issue:
+  Getting a null pointer when I try and use the login or register. I am using the same code as Maurice and he is not having this issue. Spent way too long trying to figure out
+  what is going on. Finally decided to let it go as it is not a problem when published and not a problem for others. 
+  
+Goals:
+  Have the manager home view completed 
+  
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+2/7/2021
+Progress: 
+  Updated the database tables with data for Adjustor, Claim, Insured, Manager and Property. 
+  Played with the scaffolding Maurice set up by filtering the Manager Index, changing headers and generally familiarizing myself with the structure. 
+  Wrote my paragraph for the About Us page as requested by Megan
+
+Issue:
+  Tried setting up a login view for Managers, but was unsuccessful. I think with a little more time and some brainstorming sessions with the team this should not be a problem
+  Had some data issues, but thanks to Aaron it was remediated. 
+  
+Goals:
+  Have a working login page and a customized Manager view in the next two weeks
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1/24/2021
+Progress: Downloaded SSMS, Visual studio and connected to DB. Also read through the provided Coding Standards
+Heard back from IT department and was told there is nothing they can do for me as far as
+SQLDBM and that Azure Dev tools has changed as far as licencing agreements and what I was asking for is no longer available. They did direct me to OnTheHub website. 
+
+Issue: No issues so far.
+
+Goals: Start writing some code to knock off the dust and feel more confident about what is comming.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1/17/2021
+Progress: Had meeting Thursday with the team where Maurice had an Adjuster give us a high level overview of what is needed in a claims management application. Schema is mocked up    
+
+Issues: Access to Azure Dev tools and SQLDBM with school account. I sent two emails to the help desk to resolve these issues Ticket [1DB-27927353-0001] and Ticket [2EF-279781E3-0002] 
+
+Goals: Map out in more detail what is needed 

@@ -1,0 +1,90 @@
+﻿@model Claims.Models.Claim
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Claim</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfLoss)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DateOfLoss)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Attachment)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Attachment)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Reserves)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Reserves)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Deductable)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Deductable)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.AmountPaid)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.AmountPaid)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Status)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Status)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Adjustor.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Adjustor.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Property.Address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Property.Address)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ClaimId }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

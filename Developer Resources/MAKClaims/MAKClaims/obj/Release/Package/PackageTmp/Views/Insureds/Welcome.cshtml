@@ -1,0 +1,78 @@
+﻿@model MAKClaims.Models.Claim
+
+@{
+    ViewBag.Title = "Welcome";
+}
+@ViewBag.Welcome
+<h2>Welcome</h2>
+
+<div>
+    <h4>Claim</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfLoss)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateOfLoss)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Attachment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Attachment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Reserves)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Reserves)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deductable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deductable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AmountPaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AmountPaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adjustor.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adjustor.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property.Address)
+        </dd>
+
+    </dl>
+</div>

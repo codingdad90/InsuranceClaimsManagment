@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Claims.Models.Claim>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfLoss)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Attachment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reserves)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Deductable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AmountPaid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adjustor.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Property.Address)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfLoss)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Attachment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reserves)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Deductable)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AmountPaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adjustor.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Property.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ClaimId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ClaimId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ClaimId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

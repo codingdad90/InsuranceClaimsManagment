@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Adjuster Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg ">
+    <div class="navbar-collapse collapse" id="navbarColor01">
+
+
+        <ul class="navbar-nav ">
+            <li class="nav-item">@Html.ActionLink(HttpUtility.HtmlDecode("Manager Home&nbsp;&nbsp;&nbsp;|"), "ManagerHome", "Managers", new { area = "Views", @class = "nav-link" }, null)</li>
+
+            <li class="nav-item">@Html.ActionLink(HttpUtility.HtmlDecode("&nbsp;&nbsp;&nbsp;Add Task&nbsp;&nbsp;&nbsp;|"), "AddTask", "ManualViews", new { area = "Views", @class = "navbar-brand" }, null) </li>
+ @*<li class="nav-item">@Html.ActionLink(HttpUtility.HtmlDecode(" &nbsp; &nbsp; &nbsp; Purchase Orders &nbsp; &nbsp; &nbsp;| "), "Index", "PurchaseOrders", new { area = "Inventory", @class = "navbar-brand" }, null)</li>
+    <li class="nav-item">@Html.ActionLink(HttpUtility.HtmlDecode(" &nbsp; &nbsp; &nbsp; Vendors &nbsp; &nbsp; &nbsp; "), "Index", "Vendors", new { area = "Inventory", @class = "navbar-brand" }, null)</li>*@
+
+
+
+
+</ul>
+    </div>
+
+</nav>
+
+
+
+<div class="container body-content">
+    @RenderBody()
+    <hr />
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)

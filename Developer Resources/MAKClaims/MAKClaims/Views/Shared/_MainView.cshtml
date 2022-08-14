@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_MainView</title>
+</head>
+<body>
+    <div> 
+        <table width="100%" border="1" align="center" cellspacing="5" cellpadding="5">
+            <tr style="background-color:cadetblue; color: white;">
+                <td colspan="2">MAK Claims | Welcome</td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="btn-right">
+                        <button type="button" onclick="location.href='@Url.Action("Welcome", "Insureds")'">Insured </button>
+                        <button type="button" onclick="location.href='@Url.Action("Employee", "ManualViews")'">Employee </button>
+                    </div>
+                </td>
+            </tr>
+            <tr height="500">
+                <td width="150">
+                    <ul>
+                        <li>@Html.ActionLink("Home", "Index")</li>
+                    </ul>
+                </td>
+                <td width="550">@RenderBody()</td>
+            </tr>
+
+        </table>
+
+    </div>
+</body>
+</html>

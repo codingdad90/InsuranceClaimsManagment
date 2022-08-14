@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Kamma Software</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script>
+function validateForm() {
+  var a = document.forms["myForm"]["fullName"].value;
+  var b = document.forms["myForm"]["emailAdd"].value;
+  var c = document.forms["myForm"]["subject"].value;
+  var d = document.forms["myForm"]["message"].value;
+  if (a == "" ||b == ""||c == ""||d == "") {
+    alert("All fields are required!");
+    return false;
+  }
+  else
+  alert("Thank you for your submission!");
+	
+ 
+} 
+	</script>
+
+</head>
+<body>
+	<div id="header">
+		<div>
+			<a href="index.html" class="logo">
+				<img src="images/logo.jpg" alt="Logo" height="180" width="180"/>
+			<h1><br>&emsp;&ensp;Kamma Software</h1>
+			</a> <span><b></b></span>
+		</div>
+		<ul>
+				<li><a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="about.html">About Us</a>
+			</li>
+			<li>
+				<a href="software.html">Software</a>
+			</li>
+			<li>
+				<a href="pricing.html">Pricing</a>
+			</li>
+			<li>
+				<a href="reviews.html">Reviews</a>
+			</li>
+				<li class="selected">
+				<a href="contact.html">Contact</a>
+			</li>
+		</ul>
+	</div>
+	<div id="body">
+		<div class="content">
+			
+			<form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
+				<label for="fullName"> <span>your name:</span>
+					<input type="text" name="fullName" id="fullName">
+					<form action="/action_page.php" method="post">
+				</label>
+				<label for="emailAdd"> <span>email address:</span>
+					<input type="text" name="emailAdd" id="emailAdd">
+				</label>
+				<label for="subject"> <span>subject:</span>
+					<input type="text" name="subject" id="subject">
+				</label>
+				<label for="message"> <span>message:</span>
+					<textarea name="" id="message" cols="30" rows="10"></textarea>
+				</label>
+					<form action="https://website.com/home.php?" method="POST">
+				
+				
+ <input type="submit" value="Submit" class="shiny-button">
+
+
+			</form>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿@using MAKClaims.Controllers;
+@using Microsoft.AspNet.Identity
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row: align-content-center">
+
+    <div class="column: align-content-center">
+        @if (User.Identity.IsAuthenticated)
+         { 
+            <div class="container" style="align-content: center">
+                <div class="jumbotron" style="background-color:cadetblue; color: white; width: 85%">
+                   
+                    <h2 style="text-align:center"> MAK Claims</h2>
+                    <p class="lead" style="text-align: center">Your company name will be prominently displayed above for a customized look.</p>
+                </div>
+            </div>
+         }
+          else
+          {
+                <div class="container" style="align-items: center" >
+                    <div class="jumbotron" style="width: 85%; align-content: center">
+                        <h2 style="text-align:center"> MAK Claims</h2>
+                        <p class="lead" style="text-align: center">Your company name will be prominently displayed above for a customized look.</p>
+                    </div>
+                </div>
+          }
+    </div>
+
+</div>
+        <div class="column: align-content-center">
+            <div style="align-content: center">
+                <h2 style="text-align: center">Welcome!</h2>
+             <p style="text-align: center">
+                We are here to ensure you have the most up to date information available about your claim and to give
+
+             </p>
+             <p style="text-align: center">
+                you a place to communicate anything you need to tell us in order to facilitate your claim in a timely fashion.           
+             </p>
+             <p style="text-align: center">Please login or register to begin!</p>
+
+            </div>
+        </div>
+        <div row>
+            <div class="column">
+
+
+
+                <div class="column" style="float:right">
+                    <h6> MAK Claims</h6>
+                    <p>Find out more about the software </p>
+                    <p> company bringing you this product</p>
+                    <p> <a class="btn btn-default" href="http://dotnet.reynolds.edu/ITP298-Claims/CompanyWebsite/index.html">Click Here &raquo;</a></p>
+                </div>
+                <div class="column" style="float:left">
+                    
+                    <p> Use the menu to log in.</p>
+                    <p>Adjustor Username: gravida@placerat.com   PW: Testing1*</p>
+                    <p>Manager Username: eleifend.Cras@ipsum.com PW: Testing_123</p>
+                </div>
+
+
+            </div>
+        </div>

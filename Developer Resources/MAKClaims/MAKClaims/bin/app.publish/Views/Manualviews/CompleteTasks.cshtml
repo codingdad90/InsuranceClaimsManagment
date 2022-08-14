@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MAKClaims.Models.ClaimAction>
+@{
+    ViewBag.Title = "CompleteTasks";
+}
+
+<h2>CompleteTasks</h2>
+
+@*@if (User.IsInRole("Manager"))
+{
+    <text>&nbsp; &nbsp; &nbsp;</text>
+    <label class="filter">Filter by</label>
+    <text>&nbsp</text>
+    <label class="filter">Category</label>
+    <text>&nbsp; &nbsp;</text>
+    @Html.DropDownList("AdjustorId", null, htmlAttributes: new { @class = "filter", @onchange = "FilterByTag()" })
+}*@
+<label class="filter">Search by Address</label>
+
+@Html.TextArea("Search", null, htmlAttributes: new { @class = "filter", @onchange = "FilterByName()", @rows = "1" })
+&nbsp;&nbsp;&nbsp;
+@Html.ActionLink("Active Tasks", "Tasks")</p>
+
+<div id="itemContainer">
+    @Html.Partial("_Tasks", Model)
+</div>
+
+
+@section scripts {
+    <script type="text/javascript">
+        function FilterByTag() {
+            var categoryId = $('#AdjustorId').val();
+
+            var container = $('#itemContainer');
+            container.load('@Url.Action("_IndexByTag2")?id=' + categoryId);
+        }
+        function FilterByName() {
+            var search = $('#Search').val();
+            var container = $('#itemContainer');
+            container.load('@Url.Action("_IndexByName2")?parm=' + search);
+
+        }
+    </script>
+}
+
